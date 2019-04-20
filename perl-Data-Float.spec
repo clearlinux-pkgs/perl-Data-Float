@@ -4,7 +4,7 @@
 #
 Name     : perl-Data-Float
 Version  : 0.013
-Release  : 10
+Release  : 11
 URL      : https://cpan.metacpan.org/authors/id/Z/ZE/ZEFRAM/Data-Float-0.013.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/Z/ZE/ZEFRAM/Data-Float-0.013.tar.gz
 Summary  : 'details of the floating point data type'
@@ -26,6 +26,7 @@ and functions to manipulate floating point values at a low level.
 Summary: dev components for the perl-Data-Float package.
 Group: Development
 Provides: perl-Data-Float-devel = %{version}-%{release}
+Requires: perl-Data-Float = %{version}-%{release}
 
 %description dev
 dev components for the perl-Data-Float package.
