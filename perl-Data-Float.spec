@@ -4,12 +4,13 @@
 #
 Name     : perl-Data-Float
 Version  : 0.013
-Release  : 13
+Release  : 14
 URL      : https://cpan.metacpan.org/authors/id/Z/ZE/ZEFRAM/Data-Float-0.013.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/Z/ZE/ZEFRAM/Data-Float-0.013.tar.gz
 Summary  : 'details of the floating point data type'
 Group    : Development/Tools
 License  : Artistic-1.0-Perl
+Requires: perl-Data-Float-perl = %{version}-%{release}
 BuildRequires : buildreq-cpan
 
 %description
@@ -32,14 +33,24 @@ Requires: perl-Data-Float = %{version}-%{release}
 dev components for the perl-Data-Float package.
 
 
+%package perl
+Summary: perl components for the perl-Data-Float package.
+Group: Default
+Requires: perl-Data-Float = %{version}-%{release}
+
+%description perl
+perl components for the perl-Data-Float package.
+
+
 %prep
 %setup -q -n Data-Float-0.013
+cd %{_builddir}/Data-Float-0.013
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-export LANG=C
+export LANG=C.UTF-8
 if test -f Makefile.PL; then
 %{__perl} Makefile.PL
 make  %{?_smp_mflags}
@@ -62,8 +73,11 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.28.2/Data/Float.pm
 
 %files dev
 %defattr(-,root,root,-)
 /usr/share/man/man3/Data::Float.3
+
+%files perl
+%defattr(-,root,root,-)
+/usr/lib/perl5/vendor_perl/5.30.1/Data/Float.pm
