@@ -4,7 +4,7 @@
 #
 Name     : perl-Data-Float
 Version  : 0.013
-Release  : 20
+Release  : 21
 URL      : https://cpan.metacpan.org/authors/id/Z/ZE/ZEFRAM/Data-Float-0.013.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/Z/ZE/ZEFRAM/Data-Float-0.013.tar.gz
 Summary  : 'details of the floating point data type'
