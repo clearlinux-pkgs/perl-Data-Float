@@ -4,7 +4,7 @@
 #
 Name     : perl-Data-Float
 Version  : 0.013
-Release  : 21
+Release  : 22
 URL      : https://cpan.metacpan.org/authors/id/Z/ZE/ZEFRAM/Data-Float-0.013.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/Z/ZE/ZEFRAM/Data-Float-0.013.tar.gz
 Summary  : 'details of the floating point data type'
@@ -81,4 +81,4 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.34.0/Data/Float.pm
+/usr/lib/perl5/*
